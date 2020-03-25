@@ -1,0 +1,43 @@
+// font styles
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap');
+
+$font-stack: 'Montserrat',
+sans-serif;
+
+$font-x-light: 100;
+$font-light: 300;
+$font-medium: 400;
+$font-bold: 700;
+$font-black: 900;
+
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #0095dd, #00a0a0);
+$background-color: #00a0a0;
+$grey-text: #808080;
+
+
+
+// color styles
+
+
+// vars
+
+
+
+// mixins
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+// file imports
+@import 'normalize';
+@import 'global';
+@import 'intro';
