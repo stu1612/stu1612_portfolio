@@ -15,26 +15,34 @@ nav {
 
         h1 {
             margin: 5%;
+            display: inline-block;
         }
     }
 
     ul {
         @include flex(space-evenly, center, row);
-        flex: 1 1 40rem;
+        flex: 1 1 10rem;
+
+        li a {
+            font-size: 2vw;
+            font-weight: $font-light;
+        }
     }
 }
 
 .intro {
-    min-width: 90vh;
+    // min-width: 90vh;
     width: 90%;
     margin: auto;
-    flex-grow: wrap;
+    flex-wrap: wrap;
     @include flex(space-evenly, center, row);
 
     h2 {
-        font-size: 8rem;
+        font-size: 4vw;
         padding-top: 2rem;
         background: $gradient;
+        background: #00a0a0;
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         display: inline-block;
@@ -65,5 +73,5 @@ nav {
 
 .intro-text,
 .banner-image {
-    flex: 1 1 40rem;
+    flex: 1 1 10rem;
 }

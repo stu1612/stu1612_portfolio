@@ -468,7 +468,7 @@ p {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3vw;
 }
 
 h2 {
@@ -516,29 +516,35 @@ nav .logo {
 }
 nav .logo h1 {
   margin: 5%;
+  display: inline-block;
 }
 nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
-  flex: 1 1 40rem;
+  flex: 1 1 10rem;
+}
+nav ul li a {
+  font-size: 2vw;
+  font-weight: 300;
 }
 
 .intro {
-  min-width: 90vh;
   width: 90%;
   margin: auto;
-  flex-grow: wrap;
+  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
 }
 .intro h2 {
-  font-size: 8rem;
+  font-size: 4vw;
   padding-top: 2rem;
   background: linear-gradient(left, #0095dd, #00a0a0);
+  background: #00a0a0;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -566,5 +572,5 @@ nav ul {
 
 .intro-text,
 .banner-image {
-  flex: 1 1 40rem;
+  flex: 1 1 10rem;
 }
