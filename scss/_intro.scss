@@ -31,14 +31,17 @@ nav {
 }
 
 .intro {
-    // min-width: 90vh;
+    min-width: 90vh;
     width: 90%;
     margin: auto;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     @include flex(space-evenly, center, row);
+    margin-top: 1rem;
+
+
 
     h2 {
-        font-size: 4vw;
+        font-size: 4rem;
         padding-top: 2rem;
         background: $gradient;
         background: #00a0a0;
@@ -60,8 +63,11 @@ nav {
 }
 
 .social-links {
-    margin-top: 4rem;
-    margin-right: 5rem;
+    margin-top: 2rem;
+
+    a {
+        margin-right: 2rem;
+    }
 }
 
 .active {
@@ -73,5 +79,76 @@ nav {
 
 .intro-text,
 .banner-image {
-    flex: 1 1 10rem;
+    flex: 1 1 40rem;
+}
+
+svg {
+    width: 100%;
+}
+
+// animation keyframes
+
+#body {
+    animation: shuffle 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#left-earphone {
+    animation: left 1s ease-in-out infinite alternate;
+
+}
+
+#right-earphone {
+    animation: right 1s ease-in-out infinite alternate;
+
+}
+
+#face {
+    animation: face 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+
+@keyframes face {
+    from {
+        transform: rotateZ(-5deg);
+    }
+
+    to {
+        transform: rotateZ(5deg);
+    }
+}
+
+
+@keyframes left {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-1%);
+    }
+}
+
+
+@keyframes right {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(1%);
+    }
+}
+
+@keyframes shuffle {
+    from {
+        transform: translateY(-1%)
+    }
+
+    to {
+        transform: translateY(2%)
+    }
 }

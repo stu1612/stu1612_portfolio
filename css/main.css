@@ -464,7 +464,7 @@ label,
 input,
 a,
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 h1 {
@@ -531,16 +531,17 @@ nav ul li a {
 }
 
 .intro {
+  min-width: 90vh;
   width: 90%;
   margin: auto;
-  flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  margin-top: 1rem;
 }
 .intro h2 {
-  font-size: 4vw;
+  font-size: 4rem;
   padding-top: 2rem;
   background: linear-gradient(left, #0095dd, #00a0a0);
   background: #00a0a0;
@@ -559,8 +560,10 @@ nav ul li a {
 }
 
 .social-links {
-  margin-top: 4rem;
-  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.social-links a {
+  margin-right: 2rem;
 }
 
 .active {
@@ -572,5 +575,118 @@ nav ul li a {
 
 .intro-text,
 .banner-image {
-  flex: 1 1 10rem;
+  flex: 1 1 40rem;
+}
+
+svg {
+  width: 100%;
+}
+
+#body {
+  animation: shuffle 1s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#left-earphone {
+  animation: left 1s ease-in-out infinite alternate;
+}
+
+#right-earphone {
+  animation: right 1s ease-in-out infinite alternate;
+}
+
+#face {
+  animation: face 1s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes face {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+@keyframes left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-1%);
+  }
+}
+@keyframes right {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(1%);
+  }
+}
+@keyframes shuffle {
+  from {
+    transform: translateY(-1%);
+  }
+  to {
+    transform: translateY(2%);
+  }
+}
+@media (max-width: 1388px) {
+  svg {
+    width: 80%;
+  }
+
+  .intro {
+    margin-top: 0;
+  }
+
+  .intro-text {
+    margin-left: 1rem;
+  }
+
+  nav {
+    width: 100%;
+  }
+}
+@media (max-width: 755px) {
+  .intro {
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    line-height: 1;
+    padding: 3rem 0;
+  }
+
+  .intro-text {
+    text-align: center;
+  }
+
+  svg {
+    display: block;
+    margin: auto;
+    background: #000;
+    padding: 5px;
+    margin-top: 3rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+
+  .social-links a img {
+    height: 50px;
+  }
 }
