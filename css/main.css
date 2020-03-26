@@ -30,7 +30,6 @@ body {
    */
 article,
 aside,
-footer,
 header,
 nav,
 section {
@@ -509,7 +508,7 @@ nav {
 }
 nav .logo {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   flex: 1 1 10rem;
@@ -777,9 +776,18 @@ svg {
   .social-links a img {
     height: 40px;
   }
+
+  .image h2 {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 320px) {
   .image {
     flex: 1 1 20rem;
+  }
+}
+@media (max-width: 2380px) {
+  .images {
+    flex: 1 1 45rem;
   }
 }
