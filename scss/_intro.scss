@@ -31,14 +31,11 @@ nav {
 }
 
 .intro {
-    min-width: 90vh;
+    // min-width: 90vh;
     width: 90%;
     margin: auto;
     // flex-wrap: wrap;
     @include flex(space-evenly, center, row);
-    margin-top: 1rem;
-
-
 
     h2 {
         font-size: 4rem;
@@ -85,6 +82,7 @@ nav {
 svg {
     width: 100%;
 }
+
 
 // animation keyframes
 

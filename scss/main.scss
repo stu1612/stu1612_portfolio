@@ -1,7 +1,7 @@
 // font styles
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&display=swap");
 
-$font-stack: 'Montserrat',
+$font-stack: "Montserrat",
 sans-serif;
 
 $font-x-light: 100;
@@ -19,14 +19,9 @@ $gradient: linear-gradient(left, #0095dd, #00a0a0);
 $background-color: #00a0a0;
 $grey-text: #808080;
 
-
-
 // color styles
 
-
 // vars
-
-
 
 // mixins
 
@@ -38,13 +33,13 @@ $grey-text: #808080;
 }
 
 // file imports
-@import 'normalize';
-@import 'global';
-@import 'intro';
-
+@import "normalize";
+@import "global";
+@import "intro";
+@import "projects";
 
 // media queries
-@media(max-width: 1388px) {
+@media (max-width: 1388px) {
     svg {
         width: 80%;
     }
@@ -62,13 +57,20 @@ $grey-text: #808080;
     }
 }
 
-@media(max-width: 755px) {
+@media (max-width: 755px) {
+
+    // intro
+
     .intro {
         flex-wrap: wrap;
     }
 
     h1 {
         font-size: 3rem;
+    }
+
+    .intro h2 {
+        font-size: 10vw;
     }
 
     h2 {
@@ -86,7 +88,8 @@ $grey-text: #808080;
         margin: auto;
         background: #000;
         padding: 5px;
-        margin-top: 3rem;
+        margin-top: 5rem;
+        height: 50vh;
     }
 
     nav ul {
@@ -94,10 +97,59 @@ $grey-text: #808080;
     }
 
     p {
-        font-size: 3rem;
+        font-size: 7vw;
     }
 
     .social-links a img {
         height: 50px;
+    }
+
+    // project
+
+    .image:first-of-type {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 438px) {
+
+    nav .logo {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .image {
+        padding: 0;
+        flex: 1 1 25rem;
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    nav .logo h1 {
+        margin: 2%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        padding-top: 0;
+    }
+
+    .intro h2 {
+        padding-top: 3rem;
+    }
+
+    .social-links a img {
+        height: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .image {
+        flex: 1 1 20rem;
     }
 }
