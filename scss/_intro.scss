@@ -16,6 +16,7 @@ nav {
         h1 {
             margin: 5%;
             display: inline-block;
+            animation: rotate 4s ease-in-out infinite;
         }
     }
 
@@ -148,5 +149,15 @@ nav {
 
     to {
         transform: translateY(2%)
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
     }
 }

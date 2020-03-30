@@ -516,6 +516,7 @@ nav .logo {
 nav .logo h1 {
   margin: 5%;
   display: inline-block;
+  animation: rotate 4s ease-in-out infinite;
 }
 nav ul {
   display: flex;
@@ -629,6 +630,14 @@ nav ul li a {
   }
   to {
     transform: translateY(2%);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 .starwars {
@@ -763,6 +772,7 @@ nav ul li a {
   border-radius: 5%;
   width: 100%;
   position: relative;
+  opacity: 0;
 }
 
 .box:hover {
@@ -801,6 +811,17 @@ nav ul li a {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* Y axis  */
+.from-bottom {
+  transform: translateY(100px);
+  transition: 1s all ease-in-out;
+}
+
+.appear-bottom {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .box1 {
@@ -893,20 +914,6 @@ nav ul li a {
   grid-area: box15;
 }
 
-@keyframes hover {
-  0% {
-    transform: translateY(0%);
-  }
-  33.3% {
-    transform: translateY(1%);
-  }
-  66.6% {
-    transform: translateY(-1%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
 @media (max-width: 1212px) {
   .grid {
     grid-template-columns: repeat(auto-fit, 2, 1fr);
