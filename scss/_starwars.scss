@@ -1,0 +1,158 @@
+.starwars {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 1024px;
+}
+
+.starwars svg {
+    width: 100%;
+}
+
+#darthvader {
+    animation: darkside 5s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#luke {
+    animation: rebellion 5s linear infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#red-lightsaber {
+    animation: darthAttacks 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+#blue-lightsaber {
+    animation: jedi 1s linear infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes darkside {
+    0% {}
+
+    10% {
+        transform: translateX(-20%); // defend
+    }
+
+    20% {
+        transform: translateY(10%);
+    }
+
+    30% {
+        transform: translateY(-10%);
+    }
+
+    40% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateX(5%); // attack
+    }
+
+    60% {
+        transform: translateX(-20%); // defend
+    }
+
+    70% {
+        transform: translateY(-20%);
+    }
+
+    80% {
+        transform: translateY(10%);
+    }
+
+    90% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(0%); // attack
+    }
+
+
+}
+
+@keyframes darthAttacks {
+    from {
+        transform: rotateZ(-20deg);
+    }
+
+    to {
+        transform: rotateZ(20deg);
+    }
+}
+
+
+
+@keyframes rebellion {
+    0% {}
+
+    10% {
+        // transform: translateX(-20%); // defend
+        transform: translateY(10%); // attack
+    }
+
+    20% {
+        // transform: translateY(10%);
+        transform: translateX(-10%);
+    }
+
+    30% {
+        // transform: translateY(-10%);
+        transform: translateX(10%);
+    }
+
+    40% {
+        // transform: translateY(0%);
+        transform: translateY(-10%);
+    }
+
+    50% {
+        // transform: translateX(5%); // attack
+        transform: translateY(0%);
+    }
+
+    60% {
+        // transform: translateX(-20%); // defend
+        transform: translateX(-20%); // attack
+    }
+
+    70% {
+        // transform: translateY(-20%);
+        transform: translateX(20%);
+    }
+
+    80% {
+        // transform: translateY(10%);
+        transform: translateY(-10%);
+    }
+
+    90% {
+        // transform: translateX(10%);
+        transform: translateX(-10%);
+    }
+
+    100% {
+        // transform: translateX(0%); // attack
+        transform: translateX(0%); // attack
+    }
+
+}
+
+@keyframes jedi {
+    from {
+        transform: rotateZ(10deg);
+    }
+
+    to {
+        transform: rotateZ(-10deg);
+    }
+}

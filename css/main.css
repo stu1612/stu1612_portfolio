@@ -631,14 +631,122 @@ nav ul li a {
     transform: translateY(2%);
   }
 }
-.face svg {
-  width: 200px;
+.starwars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 1024px;
 }
 
-.intro {
-  border-bottom: 1px solid black;
+.starwars svg {
+  width: 100%;
 }
 
+#darthvader {
+  animation: darkside 5s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#luke {
+  animation: rebellion 5s linear infinite alternate;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#red-lightsaber {
+  animation: darthAttacks 1s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#blue-lightsaber {
+  animation: jedi 1s linear infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+@keyframes darkside {
+  10% {
+    transform: translateX(-20%);
+  }
+  20% {
+    transform: translateY(10%);
+  }
+  30% {
+    transform: translateY(-10%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  60% {
+    transform: translateX(-20%);
+  }
+  70% {
+    transform: translateY(-20%);
+  }
+  80% {
+    transform: translateY(10%);
+  }
+  90% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes darthAttacks {
+  from {
+    transform: rotateZ(-20deg);
+  }
+  to {
+    transform: rotateZ(20deg);
+  }
+}
+@keyframes rebellion {
+  10% {
+    transform: translateY(10%);
+  }
+  20% {
+    transform: translateX(-10%);
+  }
+  30% {
+    transform: translateX(10%);
+  }
+  40% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateX(-20%);
+  }
+  70% {
+    transform: translateX(20%);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  90% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes jedi {
+  from {
+    transform: rotateZ(10deg);
+  }
+  to {
+    transform: rotateZ(-10deg);
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 3, 1fr);
