@@ -36,14 +36,14 @@ $grey-text: #808080;
 @import "normalize";
 @import "global";
 @import "intro";
-// @import "projects";
+@import "face";
 @import "grid";
 
 
 
 // media queries
 @media (max-width: 1388px) {
-    svg {
+    .banner-image svg {
         width: 80%;
     }
 
@@ -86,7 +86,7 @@ $grey-text: #808080;
         text-align: center;
     }
 
-    svg {
+    .banner-image svg {
         display: block;
         margin: auto;
         background: #000;
@@ -115,6 +115,12 @@ $grey-text: #808080;
     }
 }
 
+@media (max-width: 612px) {
+    .banner-image svg {
+        width: 100%;
+    }
+}
+
 @media (max-width: 438px) {
 
     nav .logo {
@@ -125,10 +131,6 @@ $grey-text: #808080;
     .image {
         padding: 0;
         flex: 1 1 25rem;
-    }
-
-    svg {
-        width: 100%;
     }
 
     nav .logo h1 {

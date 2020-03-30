@@ -575,7 +575,7 @@ nav ul li a {
   flex: 1 1 40rem;
 }
 
-svg {
+.banner-image svg {
   width: 100%;
 }
 
@@ -631,6 +631,14 @@ svg {
     transform: translateY(2%);
   }
 }
+.face svg {
+  width: 200px;
+}
+
+.intro {
+  border-bottom: 1px solid black;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 3, 1fr);
@@ -651,7 +659,7 @@ svg {
 
 .box:hover {
   animation: hover 0.5s linear;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .box img {
@@ -671,11 +679,11 @@ svg {
   opacity: 0;
   text-align: center;
   text-transform: capitalize;
-  transition: transform 1s, opacity 1s ease-in-out;
+  transition: transform 2s, opacity 1s linear;
   color: #fff;
-  left: 50%;
-  top: 60%;
-  transform: translate(-50%, -60%);
+  left: 10%;
+  top: 50%;
+  transform: translate(-90%, -50%);
   position: absolute;
 }
 
@@ -791,8 +799,181 @@ svg {
     transform: translateY(0%);
   }
 }
+@media (max-width: 1212px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, 2, 1fr);
+    grid-template-areas: "box1 box2" "box3 box4" "box5 box6" "box7 box8" "box9 box10" "box11 box12" "box13 box14" "box15 .";
+  }
+
+  .box h2 {
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.8);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    padding: 1rem 0;
+    width: 100%;
+    color: #000;
+    font-size: 3vw;
+  }
+  .box1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .box2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .box3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .box4 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .box5 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .box6 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+  .box7 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .box8 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+  .box9 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .box10 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+  }
+  .box11 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .box12 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 3;
+  }
+  .box13 {
+    -ms-grid-row: 13;
+    -ms-grid-column: 1;
+  }
+  .box14 {
+    -ms-grid-row: 13;
+    -ms-grid-column: 3;
+  }
+  .box15 {
+    -ms-grid-row: 15;
+    -ms-grid-column: 1;
+  }
+}
+@media (max-width: 755px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, 1, 1fr);
+    margin: 5rem;
+    grid-template-areas: "box1" "box2" "box3" "box4" "box5" "box6" "box7" "box8" "box9" "box10" "box11" "box12" "box13" "box14" "box15";
+  }
+
+  .box {
+    max-height: none;
+  }
+
+  .box h2 {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    position: absolute;
+  }
+  .box1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .box2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .box3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .box4 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+  .box5 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+  .box6 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+  }
+  .box7 {
+    -ms-grid-row: 13;
+    -ms-grid-column: 1;
+  }
+  .box8 {
+    -ms-grid-row: 15;
+    -ms-grid-column: 1;
+  }
+  .box9 {
+    -ms-grid-row: 17;
+    -ms-grid-column: 1;
+  }
+  .box10 {
+    -ms-grid-row: 19;
+    -ms-grid-column: 1;
+  }
+  .box11 {
+    -ms-grid-row: 21;
+    -ms-grid-column: 1;
+  }
+  .box12 {
+    -ms-grid-row: 23;
+    -ms-grid-column: 1;
+  }
+  .box13 {
+    -ms-grid-row: 25;
+    -ms-grid-column: 1;
+  }
+  .box14 {
+    -ms-grid-row: 27;
+    -ms-grid-column: 1;
+  }
+  .box15 {
+    -ms-grid-row: 29;
+    -ms-grid-column: 1;
+  }
+}
+@media (max-width: 612px) {
+  .grid {
+    margin: 1rem;
+  }
+
+  .box:first-of-type {
+    margin-top: 5rem;
+  }
+
+  .box h2 {
+    font-size: 2.5vh;
+  }
+}
 @media (max-width: 1388px) {
-  svg {
+  .banner-image svg {
     width: 80%;
   }
 
@@ -831,7 +1012,7 @@ svg {
     text-align: center;
   }
 
-  svg {
+  .banner-image svg {
     display: block;
     margin: auto;
     background: #000;
@@ -856,6 +1037,11 @@ svg {
     margin-top: 5rem;
   }
 }
+@media (max-width: 612px) {
+  .banner-image svg {
+    width: 100%;
+  }
+}
 @media (max-width: 438px) {
   nav .logo {
     flex-direction: column;
@@ -865,10 +1051,6 @@ svg {
   .image {
     padding: 0;
     flex: 1 1 25rem;
-  }
-
-  svg {
-    width: 100%;
   }
 
   nav .logo h1 {
