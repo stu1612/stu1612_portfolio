@@ -1,100 +1,137 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 3, 1fr);
-    grid-gap: 1rem;
-    grid-template-areas:
-        "box1 box2 box3"
-        "box4 box5 box6"
-        "box7 box8 box9"
-        "box10 box11 box12"
-        "box13 box14 box15";
-    justify-items: center;
-    margin: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 3, 1fr);
+  grid-gap: 2rem;
+  grid-template-areas:
+    "box1 box2 box3"
+    "box4 box5 box6"
+    "box7 box8 box9"
+    "box10 box11 box12"
+    "box13 box14 box15";
+  justify-items: center;
+  margin: 3rem;
 }
 
 .box {
-    margin-bottom: 4rem;
-    overflow: hidden;
-    height: 300px;
-    border-radius: 5%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  max-height: 280px;
+  border-radius: 5%;
+  width: 100%;
+  position: relative;
+}
+
+.box:hover {
+  animation: hover 0.5s linear;
+  animation-delay: 1.5s;
 }
 
 .box img {
-    width: 100%;
-    transition: transform 2s, filter 1.5s ease-in-out;
-    transform-origin: center center;
-    filter: brightness(90%);
+  width: 100%;
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(90%);
 }
 
 .box:hover img {
-    filter: brightness(40%);
-    transform: scale(1.3);
+  filter: brightness(30%);
+  transform: scale(1.3);
 }
 
 .box h2 {
-    font-size: 4vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  font-size: 4vh;
+  opacity: 0;
+  text-align: center;
+  text-transform: capitalize;
+  transition: transform 1s, opacity 1s ease-in-out;
+  color: #fff;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+  position: absolute;
+}
+
+.box:hover h2 {
+  position: absolute;
+  opacity: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .box1 {
-    grid-area: box1;
+  grid-area: box1;
 }
 
 .box2 {
-    grid-area: box2;
+  grid-area: box2;
 }
 
 .box3 {
-    grid-area: box3;
+  grid-area: box3;
 }
 
 .box4 {
-    grid-area: box4;
+  grid-area: box4;
 }
 
 .box5 {
-    grid-area: box5;
+  grid-area: box5;
 }
 
 .box6 {
-    grid-area: box6;
+  grid-area: box6;
 }
 
 .box7 {
-    grid-area: box7;
+  grid-area: box7;
 }
 
 .box8 {
-    grid-area: box8;
+  grid-area: box8;
 }
 
 .box9 {
-    grid-area: box9;
+  grid-area: box9;
 }
 
 .box10 {
-    grid-area: box10;
+  grid-area: box10;
 }
 
 .box11 {
-    grid-area: box11;
+  grid-area: box11;
 }
 
 .box12 {
-    grid-area: box12;
+  grid-area: box12;
 }
 
 .box13 {
-    grid-area: box13;
+  grid-area: box13;
 }
 
 .box14 {
-    grid-area: box14;
+  grid-area: box14;
 }
 
 .box15 {
-    grid-area: box15;
+  grid-area: box15;
+}
+
+// keyframes
+
+@keyframes hover {
+  0% {
+    transform: translateY(0%);
+  }
+  33.3% {
+    transform: translateY(1%);
+  }
+  66.6% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
