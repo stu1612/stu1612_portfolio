@@ -563,6 +563,9 @@ nav ul li a {
 .social-links a {
   margin-right: 2rem;
 }
+.social-links :hover img {
+  animation: hover 1s linear alternate;
+}
 
 .active {
   background-color: #00a0a0;
@@ -638,6 +641,14 @@ nav ul li a {
   }
   to {
     transform: rotateY(360deg);
+  }
+}
+@keyframes hover {
+  from {
+    transform: rotateZ(-20deg);
+  }
+  to {
+    transform: rotateZ(20deg);
   }
 }
 .starwars-episode {
@@ -776,6 +787,39 @@ nav ul li a {
     transform: rotateZ(-10deg);
   }
 }
+.title-container {
+  width: 100%;
+  height: 20vh;
+  background: #00a0a0;
+  position: relative;
+  display: flex;
+  flex-direction: center;
+  margin-bottom: 10rem;
+}
+
+.title-content {
+  position: absolute;
+  width: 70%;
+  background: #65a9ca;
+  left: 50%;
+  top: 70%;
+  padding: 4rem;
+  transform: translate(-50%, -30%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+}
+
+@media (max-width: 755px) {
+  .title-container {
+    height: 30vh;
+  }
+
+  .title-container h2 {
+    font-size: 10vw;
+  }
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 3, 1fr);
@@ -793,11 +837,6 @@ nav ul li a {
   width: 100%;
   position: relative;
   opacity: 0;
-}
-
-.box:hover {
-  animation: hover 0.5s linear;
-  animation-delay: 1s;
 }
 
 .box img {

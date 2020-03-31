@@ -1,3 +1,41 @@
+// title-container
+.title-container {
+    width: 100%;
+    height: 20vh;
+    background: $background-color;
+    position: relative;
+    display: flex;
+    flex-direction: center;
+    margin-bottom: 10rem;
+}
+
+.title-content {
+    position: absolute;
+    width: 70%;
+    background: #65a9ca;
+    left: 50%;
+    top: 70%;
+    padding: 4rem;
+    transform: translate(-50%, -30%);
+    @include flex(center, center, center);
+}
+
+@media(max-width:755px) {
+
+    .title-container {
+        height: 30vh;
+    }
+
+    .title-container h2 {
+        font-size: 10vw;
+    }
+}
+
+
+
+
+// gridlayout
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 3, 1fr);
@@ -21,11 +59,6 @@
     width: 100%;
     position: relative;
     opacity: 0;
-}
-
-.box:hover {
-    animation: hover 0.5s linear;
-    animation-delay: 1s;
 }
 
 .box img {

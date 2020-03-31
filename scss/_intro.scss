@@ -66,7 +66,12 @@ nav {
     a {
         margin-right: 2rem;
     }
+
+    :hover img {
+        animation: hover 1s linear alternate;
+    }
 }
+
 
 .active {
     background-color: $background-color;
@@ -159,5 +164,15 @@ nav {
 
     to {
         transform: rotateY(360deg);
+    }
+}
+
+@keyframes hover {
+    from {
+        transform: rotateZ(-20deg);
+    }
+
+    to {
+        transform: rotateZ(20deg);
     }
 }
