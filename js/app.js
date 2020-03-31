@@ -9,6 +9,7 @@ const scroll = window.requestAnimationFrame ||
 const elementsFromBottom = document.querySelectorAll('.from-bottom');
 
 
+
 // From BOTTOM
 function loopBottom() {
     Array.prototype.forEach.call(elementsFromBottom, function (element) {
