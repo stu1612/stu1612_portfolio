@@ -116,6 +116,38 @@ $grey-text: #808080;
     }
 }
 
+/* Y axis  */
+.from-bottom {
+    transform: translateY(100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-bottom {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* X axis */
+.from-left {
+    transform: translateX(-100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-left {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.from-right {
+    transform: translateX(100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-right {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 @media (max-width: 612px) {
     .banner-image svg {
         width: 100%;

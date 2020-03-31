@@ -25,6 +25,7 @@ function loopBottom() {
 loopBottom();
 
 
+
 // Helper function from: http://stackoverflow.com/a/7557433/274826
 function isElementInViewport(el) {
     // special bonus for those using jQuery

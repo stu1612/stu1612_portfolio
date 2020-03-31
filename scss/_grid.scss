@@ -9,7 +9,7 @@
     margin-bottom: 15rem;
 }
 
-.title-content {
+#title-content {
     position: absolute;
     width: 70%;
     background: #65a9ca;
@@ -94,16 +94,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* Y axis  */
-.from-bottom {
-    transform: translateY(100px);
-    transition: 1s all ease-in-out;
-}
-
-.appear-bottom {
-    opacity: 1;
-    transform: translateY(0px);
-}
 
 // grid layout
 

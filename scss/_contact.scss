@@ -47,13 +47,18 @@
     }
 }
 
+@media(max-width:755px) {
+    .contact .left-box {
+        width: fit-content;
+    }
+}
+
 @media (max-width: 625px) {
     .contact .right-box {
         display: none;
     }
 
     .contact .left-box {
-        width: fit-content;
         width: 95%;
         top: 50%;
         left: 50%;
