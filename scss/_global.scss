@@ -9,7 +9,9 @@
 html,
 body {
     font-family: $font-stack;
+    overflow-x: hidden;
 }
+
 
 li,
 button,
