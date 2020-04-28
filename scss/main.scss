@@ -52,9 +52,9 @@ $grey-text: #808080;
         margin-top: 0;
     }
 
-    .intro-text {
-        margin-left: 1rem;
-    }
+    // .intro-text {
+    //     margin-left: 1rem;
+    // }
 
     nav {
         width: 100%;
@@ -67,6 +67,7 @@ $grey-text: #808080;
 
     .intro {
         flex-wrap: wrap;
+        width: 100%;
     }
 
     h1 {
@@ -200,5 +201,94 @@ $grey-text: #808080;
 @media (max-width:2380px) {
     .images {
         flex: 1 1 45rem;
+    }
+}
+
+// IE media
+
+@media screen and (-ms-high-contrast: active),
+screen and (-ms-high-contrast: none) {
+    .intro h2 {
+        background: none;
+        color: #00a0a0;
+    }
+
+    .starwars {
+        display: none;
+    }
+
+    @keyframes face {
+        from {
+            transform: rotateZ(-10deg);
+        }
+
+        to {
+            transform: rotateZ(10deg);
+        }
+    }
+
+    .grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5rem 0rem 0rem 0rem;
+    }
+
+    .box {
+        margin: .5rem;
+        width: 30%;
+    }
+
+    .box h2 {
+        background: #000;
+        padding: 0.5rem;
+    }
+
+    @media only screen and (max-width: 755px) {
+        .box {
+            width: 40%;
+        }
+
+        #title-content {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0rem;
+        }
+    }
+
+    @media only screen and (max-width: 612px) {
+        .box {
+            width: 100%;
+        }
+    }
+
+}
+
+// IE Edge
+
+.starwars {
+    display: none;
+}
+
+@supports (-ms-ime-align:auto) {
+    @keyframes face {
+        from {
+            transform: rotateZ(-1deg);
+        }
+
+        to {
+            transform: rotateZ(1deg);
+        }
+    }
+}
+
+@keyframes shuffle {
+    from {
+        transform: translateY(-1%)
+    }
+
+    to {
+        transform: translateY(1%)
     }
 }

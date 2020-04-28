@@ -177,10 +177,23 @@
     grid-area: box15;
 }
 
+.box16 {
+    grid-area: box16;
+}
+
+.box17 {
+    grid-area: box17;
+}
+
+.box18 {
+    grid-area: box18;
+}
+
+
 
 @media (max-width: 1212px) {
     .grid {
-        grid-template-columns: repeat(auto-fit, 2, 1fr);
+        grid-template-columns: repeat(auto-fill, 2, 1fr);
         grid-template-areas:
             "box1 box2"
             "box3 box4"
@@ -189,7 +202,9 @@
             "box9 box10"
             "box11 box12"
             "box13 box14"
-            "box15 .";
+            "box15 box16"
+            "box17 box18"
+        ;
     }
 
     .box h2 {
@@ -226,7 +241,10 @@
             "box12"
             "box13"
             "box14"
-            "box15";
+            "box15"
+            "box16"
+            "box17"
+            "box18";
     }
 
     .box {
